@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remmember Number Game</title>
+    <!--Bootstrap CSS 5.0-V -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <!--Bootstrap swiper css-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!--Bootstrap style css-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-warning">
+
+    <div class="container py-5 text-center">
+        <div class="timer d-none" id="secondContainer">
+            <span id="second">5</span>
+        </div>
+        <div class="row justify-content-center big-row">
+            <div class="col-10 col-sm-12 col-lg-8">
+                <div class="row mt-5" id="numbersRow">
+                    <!-- <div class="col-6 col-sm-3">
+                <div class="position-relative board">
+                  <div class="box rotate">
+                    <span class="number">1</span>
+                  </div>
+                  <div class="box absolute"></div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="box"><span class="number"></span></div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="box"><span class="number"></span></div>
+              </div>
+              <div class="col-6 col-sm-3">
+                <div class="box"><span class="number"></span></div>
+              </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="img/cubes.png" class="cubes" alt="" />
+
+    <div class="absolute start-div" id="startPanel">
+        <div class="text-center">
+            <h4 class="text-white">Sonlarni kichikdan - kattaga qarab tanlang!</h4>
+            <button class="btn btn-success" onclick="startGame()">Boshlash</button>
+        </div>
+    </div>
+
+    <div id="myModal" class="d-none">
+        <div id="succesModal" class="my-modal-body bg-success d-none">
+            <p class="mb-0">Siz yutdingiz!</p>
+            <button class="btn text-white" onclick="startGame()">
+                <i class="fas fa-redo-alt"></i>
+            </button>
+        </div>
+        <div id="errorModal" class="my-modal-body bg-danger d-none">
+            <p class="mb-0">Afsus yutqazdingiz!</p>
+            <button class="btn text-white" onclick="reload()">
+                <i class="fas fa-redo-alt"></i>
+            </button>
+        </div>
+        <div id="gameOver" class="my-modal-body bg-warning d-none">
+            <p class="mb-0 text-dark">O'yin durang bilan tugadi!</p>
+            <button class="btn text-dark" onclick="reload()">
+                <i class="fas fa-redo-alt"></i>
+            </button>
+        </div>
+    </div>
+
+    <audio src="" id="player"></audio>
+    <audio src="./audio/game.m4a" id="gamePlayer"></audio>
+    <button class="btn" onclick="playStopAudio()" id="playBtn">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+
+
+
+
+
+
+    <!--Bootstrap JS 5.0-V -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+    <!--Animation-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!--Bootstrap swiper js-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
